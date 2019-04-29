@@ -1,0 +1,6 @@
+- name: first
+  service: one
+  command: ls /app/dist
+- name: second
+  service: two
+  command: ls /app/dist

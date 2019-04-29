@@ -1,0 +1,13 @@
+one:
+  build:
+    image: image_1
+    context: ./
+    dockerfile: Dockerfile.1
+
+two:
+  build:
+    image: image_2
+    context: ./
+    dockerfile: Dockerfile.2
+    args:
+      frontend_image_name: image_1

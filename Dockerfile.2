@@ -1,0 +1,7 @@
+ARG FIRST_IMAGE_NAME
+FROM $FIRST_IMAGE_NAME as first_image
+FROM node:11.12-alpine
+
+RUN yarn global add local-web-server
+COPY --from=first_image /app/dist /dist
+CMD ["ws", "--spa", "/dist/index.html", "--rewrite", "'/* -> /dist/$1'"]
