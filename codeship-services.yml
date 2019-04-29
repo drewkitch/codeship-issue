@@ -10,4 +10,4 @@ two:
     context: ./
     dockerfile: Dockerfile.2
     args:
-      frontend_image_name: image_1
+      FIRST_IMAGE_NAME: image_1
